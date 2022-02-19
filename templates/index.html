@@ -1,0 +1,27 @@
+{% extends 'base.html' %} {% block content %}
+
+
+<!-- 1st Column -->
+<div class="columns">
+    <div class="column is-fluid">
+        <div class="box" style="fluid">
+            <p class="title is-5">Detect Zone</p>
+            <hr>
+            <img id="bg" width=100% height=100% src="{{ url_for('video_feed') }}">
+            <hr>
+
+        </div>
+        <div class="box" style="fluid">
+            <p class="title is-5">Detected Log</p>
+            <hr>
+            <embed src="{{ url_for('read_txt') }}" > <br>
+            <audio 
+                controls 
+                src ="{{ url_for('voice_feedback') }}" autoplay>
+            </audio>
+            <hr>
+        </div>
+    </div>
+    <hr>
+
+    {% endblock %}
