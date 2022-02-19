@@ -1,0 +1,4 @@
+classes= 3
+train  = data/train_proj.txt
+names = data/proj_obj.names
+backup = backup/
